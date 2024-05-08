@@ -1,0 +1,18 @@
+<!-- hiển thị message -->
+<!-- Nếu có message success -->
+<% if (typeof session.message_success !=='undefined' ) {%>
+<div class="alert alert-success mt-3 text-center">
+  <%=session.message_success%>
+</div>
+<%}%>
+    
+            <% if (typeof session.message_error !=='undefined' ) {%>
+<div class="alert alert-danger mt-3 text-center">
+  <%=session.message_error%>
+</div>
+<%}%>
+
+<%
+delete session.message_success;
+delete session.message_error;
+%>
